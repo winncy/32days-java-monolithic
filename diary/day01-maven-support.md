@@ -1,10 +1,12 @@
 # 第一天
 
 + 添加Maven架构支持
++ 编写HelloWorld程序
 
 ## 操作步骤
 
 + 项目右键 -> 添加框架支持 -> 选择Maven
++ 新建HelloWorld.java，编写HelloWorld程序
 
 ## 相关概念
 
