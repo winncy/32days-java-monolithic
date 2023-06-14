@@ -1,16 +1,18 @@
-### 验证RequestParam参数：验证失败
+### 验证RequestParam参数：验证失败 缺少param1 MissingServletRequestParameterException
 GET http://localhost:8888/validate/requestparam
 
-### 验证RequestParam参数：验证成功
+### 验证RequestParam参数：验证失败 缺少param2 ConstraintViolationException
 GET http://localhost:8888/validate/requestparam?param1=1
 
+### 验证RequestParam参数：验证成功
+GET http://localhost:8888/validate/requestparam?param1=1&param2=2
 
-### 验证RequestBody参数 ： 验证失败
+### 验证RequestBody参数 ： 验证失败 缺少param1、param2 MethodArgumentNotValidException
 POST http://localhost:8888/validate/requestbody
 Content-Type: application/json
 
 {
-  "param1": "2"
+  "param3": "3"
 }
 
 ### 验证RequestBody参数 ： 验证成功

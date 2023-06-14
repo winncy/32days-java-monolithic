@@ -1,12 +1,9 @@
-package cn.com.architecture.learn;
+package cn.com.architecture.learn.controller;
 
 import cn.com.architecture.learn.req.RequestData;
 import cn.com.architecture.learn.resp.Result;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -17,8 +14,13 @@ import javax.validation.constraints.NotNull;
 public class ValidationController {
 
     @RequestMapping("/requestparam")
-    Result<?> validateRequestParam(@NotNull(message = "param1不能为空") String param1) {
-        return Result.success(param1);
+    Result<?> validateRequestParam(@RequestParam String param1, @NotNull(message = "param2不能为空") String param2) {
+        return Result.success(String.format("%s-%s", param1, param2));
+    }
+
+    @RequestMapping("/requestparamobj")
+    Result<?> validateRequestParamObj(@Valid @RequestParam RequestData param) {
+        return Result.success(param);
     }
 
     @RequestMapping(value = "/requestbody", method = RequestMethod.POST)

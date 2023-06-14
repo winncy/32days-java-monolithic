@@ -1,4 +1,4 @@
-package cn.com.architecture.learn;
+package cn.com.architecture.learn.controller;
 
 import cn.com.architecture.learn.resp.ResponseData;
 import cn.com.architecture.learn.resp.Result;
