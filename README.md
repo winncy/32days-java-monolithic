@@ -5,9 +5,11 @@
 
 ## day02-springboot-support 添加Springboot支持、启动Web应用HelloWorld程序
 
-## day3-common-response 接口统一返回封装类 Result
+## day03-common-response 接口统一返回封装类 Result
 
-## day4-param-validation 参数校验
+## day04-param-validation 参数校验
 
-## day5-unified-exception-handling 统一异常处理
+## day05-unified-exception-handling 统一异常处理
+
+## day06-database-connection 数据库连接及持久层框架配置
 
