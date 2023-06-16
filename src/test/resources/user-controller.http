@@ -1,0 +1,5 @@
+### 获取用户列表 username 非必填
+GET http://localhost:8888/user/list
+
+### 获取用户列表 username 模糊查询
+GET http://localhost:8888/user/list?username=张
