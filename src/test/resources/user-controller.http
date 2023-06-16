@@ -3,3 +3,7 @@ GET http://localhost:8888/user/list
 
 ### 获取用户列表 username 模糊查询
 GET http://localhost:8888/user/list?username=张
+
+
+### 分页获取用户列表
+GET http://localhost:8888/user/pagelist?pageNum=1&pageSize=3
