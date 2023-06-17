@@ -5,5 +5,11 @@ GET http://localhost:8888/user/list
 GET http://localhost:8888/user/list?username=张
 
 
-### 分页获取用户列表
-GET http://localhost:8888/user/pagelist?pageNum=1&pageSize=3
+### 分页获取用户列表 pagehelper
+GET http://localhost:8888/user/list/pagehelper?pageNum=1&pageSize=3&username=张
+
+### 分页获取用户列表 mybatis mapper page
+GET http://localhost:8888/user/list/page/mapper?pageNum=1&pageSize=3&username=张
+
+### 分页获取用户列表 mybatis service page
+GET http://localhost:8888/user/list/page/service?pageNum=1&pageSize=3&username=张

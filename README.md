@@ -15,3 +15,5 @@
 
 ## day07-pagination 分页查询支持
 
+## day08-mybatis-plus-support 数据库工具mybatis-plus支持
+
