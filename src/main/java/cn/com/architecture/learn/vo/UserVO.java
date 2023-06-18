@@ -11,4 +11,5 @@ public class UserVO {
     @TableId(type = IdType.ASSIGN_ID)
     String userName;
     Integer userAge;
+    String password;
 }

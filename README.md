@@ -17,3 +17,5 @@
 
 ## day08-mybatis-plus-support 数据库工具mybatis-plus支持
 
+## day09-authentication-with-jwt 接口身份认证（JWT实现）
+

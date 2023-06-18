@@ -4,9 +4,9 @@ GET http://localhost:8888/user/list
 ### 获取用户列表 username 模糊查询
 GET http://localhost:8888/user/list?username=张
 
-
 ### 分页获取用户列表 pagehelper
 GET http://localhost:8888/user/list/pagehelper?pageNum=1&pageSize=3&username=张
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmFtZSI6IuW8oOS4iTEiLCJpYXQiOjE2ODcxMDA1MjAsImV4cCI6MTY4NzEwMDUzMH0.QKtZ_--g4tm6hulZ3Ze1q1E4XNESB5E1OmZvYewF74k
 
 ### 分页获取用户列表 mybatis mapper page
 GET http://localhost:8888/user/list/page/mapper?pageNum=1&pageSize=3&username=张
