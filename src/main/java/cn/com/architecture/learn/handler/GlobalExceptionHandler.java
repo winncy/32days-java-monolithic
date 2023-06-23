@@ -66,6 +66,7 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler({Exception.class})
     public Result<?> handleException(Exception ex) {
+        ex.printStackTrace();
         return Result.error("接口处理失败：" + ex.getMessage());
     }
 }

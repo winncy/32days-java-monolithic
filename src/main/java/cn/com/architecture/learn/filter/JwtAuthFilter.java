@@ -5,7 +5,6 @@ import cn.com.architecture.learn.jwt.JwtUtil;
 import org.springframework.beans.factory.annotation.Value;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -13,7 +12,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-@WebFilter(filterName = "JwtAuthFilter", urlPatterns = "/*")
+//@WebFilter(filterName = "JwtAuthFilter", urlPatterns = "/*")
 public class JwtAuthFilter implements Filter {
 
     private static final Set<String> ALLOWED_PATHS = new HashSet<>();

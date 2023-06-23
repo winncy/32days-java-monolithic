@@ -1,5 +1,6 @@
 package cn.com.architecture.learn.jwt;
 
+import cn.com.architecture.learn.constant.AuthConstant;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.JWTVerifier;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.Map;
 
 @Component
@@ -44,6 +46,12 @@ public class JwtUtil {
         // 过期时间
         builder.withExpiresAt(calendar.getTime());
         return builder.sign(algorithm);
+    }
+
+    public static String signJwtWithUsername(String username){
+        Map<String, String> claimInfo = new HashMap<>();
+        claimInfo.put(AuthConstant.AUTH_USERNAME, username);
+        return signJwt(claimInfo);
     }
 
     /**

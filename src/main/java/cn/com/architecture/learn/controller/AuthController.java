@@ -38,7 +38,7 @@ public class AuthController {
         return Result.error("验证失败。");
     }
 
-    @GetMapping("/error")
+    @RequestMapping("/error")
     public Result<?> error(HttpServletRequest request) {
         return Result.error((Exception) request.getAttribute(AuthConstant.AUTH_EXCEPTION));
     }

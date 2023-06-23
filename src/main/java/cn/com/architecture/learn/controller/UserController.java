@@ -1,7 +1,9 @@
 package cn.com.architecture.learn.controller;
 
+import cn.com.architecture.learn.entity.SysUser;
 import cn.com.architecture.learn.mapper.UserMapper;
 import cn.com.architecture.learn.resp.Result;
+import cn.com.architecture.learn.service.ILoginService;
 import cn.com.architecture.learn.service.IUserService;
 import cn.com.architecture.learn.vo.UserVO;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -11,10 +13,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +25,8 @@ public class UserController {
 
     IUserService userService;
 
+    ILoginService loginService;
+
     @Autowired
     public void setUserMapper(UserMapper userMapper) {
         this.userMapper = userMapper;
@@ -34,6 +35,16 @@ public class UserController {
     @Autowired
     public void setUserService(IUserService userService) {
         this.userService = userService;
+    }
+
+    @Autowired
+    public void setLoginService(ILoginService loginService) {
+        this.loginService = loginService;
+    }
+
+    @PostMapping("/login")
+    public Result<?> login(@RequestBody SysUser user){
+        return loginService.login(user);
     }
 
     @GetMapping("/list")

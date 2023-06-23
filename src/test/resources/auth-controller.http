@@ -1,2 +1,11 @@
-### 登录
+### 登录 jwtfilter
 GET http://localhost:8888/auth/login?username=张三1&password=123456
+
+### 登录 SpringSecurity
+POST http://localhost:8888/user/login
+Content-Type: application/json
+
+{
+  "userName": "test",
+  "password": "123456"
+}

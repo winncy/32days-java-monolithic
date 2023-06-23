@@ -19,3 +19,5 @@
 
 ## day09-authentication-with-jwt 接口身份认证（JWT实现）
 
+## day10-authentication-with-spring-security 接口身份认证（SpringSecurity+JWT实现）
+
