@@ -47,6 +47,11 @@ public class UserController {
         return loginService.login(user);
     }
 
+    @RequestMapping("/logout")
+    public Result<?> logout(){
+        return loginService.logout();
+    }
+
     @GetMapping("/list")
     public Result<List<UserVO>> listUser(@RequestParam(required = false) String username) {
         List<UserVO> userList = userService.list(new QueryWrapper<UserVO>().like("user_name", username + "%"));

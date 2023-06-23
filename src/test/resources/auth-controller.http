@@ -9,3 +9,7 @@ Content-Type: application/json
   "userName": "test",
   "password": "123456"
 }
+
+### 登出 SpringSecurity
+GET http://localhost:8888/user/logout
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmFtZSI6InRlc3QiLCJpYXQiOjE2ODc1MTI1ODMsImV4cCI6MTY4NzUxMjY0M30.qeuLwRZ3kMk7behiDn6puy1aG9pKhd_SSJvggLEassg

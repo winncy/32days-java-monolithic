@@ -5,4 +5,5 @@ import cn.com.architecture.learn.resp.Result;
 
 public interface ILoginService {
     Result<?> login(SysUser user);
+    Result<?> logout();
 }

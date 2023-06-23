@@ -41,7 +41,7 @@
 
 + 增加登录相关逻辑
 
-  + 在UserController中增加/login登录接口
+  + 在UserController中增加/login登录接口、/logout登出接口
   + 增加登录服务接口及实现类：ILoginService、LoginServiceImpl
 
 + 增加数据库中用户信息配置
